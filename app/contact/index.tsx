@@ -19,7 +19,7 @@ const Contact = () => {
             color:"white",
             lineHeight:50,
             letterSpacing:1
-          }}><Link href={'/'}>Home</Link>  |   <Link href={'about'}>About</Link>   | <Link href={'contact'}>Contact</Link>  |  <Link href={'services'}>Services</Link> </Text>
+          }}><Link href={'/'}>Home</Link>  |   <Link href={'/about'}>About</Link>   | <Link href={'/contact'}>Contact</Link>  |  <Link href={'/services'}>Services</Link> </Text>
       </View>
 
     
@@ -49,7 +49,7 @@ const Contact = () => {
 }}>
   <Text style={{
     fontSize:20
-  }}><Link href={'https://github.com/MuahammadArsalan'}>Follow me on Github: Muhammad Arsalan</Link></Text>
+  }}><Link href={'https://github.com/MuahammadArsalan'}>Follow me on Github: /Muhammad Arsalan</Link></Text>
 </View>
         </>
   )
