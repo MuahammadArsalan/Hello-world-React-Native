@@ -1,37 +1,67 @@
-import { Tabs } from 'expo-router';
-import React from 'react';
+import { View, Text } from 'react-native'
+import React from 'react'
+import { Link } from 'expo-router'
 
-import { TabBarIcon } from '@/components/navigation/TabBarIcon';
-import { Colors } from '@/constants/Colors';
-import { useColorScheme } from '@/hooks/useColorScheme';
-
-export default function TabLayout() {
-  const colorScheme = useColorScheme();
-
+const Home = () => {
   return (
-    <Tabs
-      screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
-        headerShown: false,
-      }}>
-      <Tabs.Screen
-        name="index"
-        options={{
-          title: 'Home',
-          tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'home' : 'home-outline'} color={color} />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="explore"
-        options={{
-          title: 'Explore',
-          tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'code-slash' : 'code-slash-outline'} color={color} />
-          ),
-        }}
-      />
-    </Tabs>
-  );
+    <>
+
+
+    <View style={{
+      backgroundColor:'gray',
+      // marginTop:50
+      flex:1,
+      justifyContent:"center",
+      alignItems:"center" 
+      
+    }}>
+        <Text style={{
+          fontSize:20,
+          fontFamily:"sans-serif",
+          color:"white",
+          lineHeight:50,
+          letterSpacing:1
+        }}><Link href={'/'}>Home</Link>  |   <Link href={'about'}>About</Link>   | <Link href={'contact'}>Contact</Link>  |  <Link href={'services'}>Services</Link> </Text>
+    </View>
+    <View style={{
+      backgroundColor:'green',
+      // marginTop:50
+      flex:3,
+      justifyContent:"center",
+      alignItems:"center" 
+      
+    }}>
+        <Text style={{
+          fontSize:30,
+          fontFamily:"sans-serif",
+          color:"white",
+          lineHeight:50,
+          letterSpacing:1
+        }}>Hello World ! From  React Native </Text>
+    </View>
+  
+
+<View style={{
+  flex:1,
+  backgroundColor:"gray",
+  justifyContent:"center",
+  alignItems:"center"
+}}>
+  <Text style={{
+    fontSize:20
+  }}><Link href={'https://github.com/MuahammadArsalan'}>Follow me:     Muhammad Arsalan</Link></Text>
+</View>
+
+
+
+
+
+
+
+
+
+    </>
+  )
 }
+
+export default Home
