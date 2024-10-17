@@ -50,7 +50,7 @@ const Services = () => {
 }}>
   <Text style={{
     fontSize:20
-  }}><Link href={'https://github.com/MuahammadArsalan'}>Follow me on Github:     Muhammad Arsalan</Link></Text>
+  }}><Link href={'https://github.com/MuahammadArsalan'}>Follow me on Github: Muhammad Arsalan</Link></Text>
 </View>
 
   </>
